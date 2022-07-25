@@ -1,36 +1,51 @@
-const numberOfFilms = +prompt('Сколько фильмов Вы посмотрели?', "");
+function calculateVolumeAndArea(length) {
+    if (typeof(length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+            return "При вычислении произошла ошибка";
+        }
+    
+        let volume = 0,
+            area = 0;
+        
+        volume = length * length * length;
+        // length ** 3 - это тоже самое, что и выше или варианты через цикл.
+        // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
+        area = 6 * (length * length);
+    
+        return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+    }
+    calculateVolumeAndArea(5);
 
-const personaMoviDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};       
-   for (let i = 0; i < 2; i++) {
-       const a = prompt('Один из последних просмотренних фильмов', ''),
-             b = prompt('На сколько оцените его?', '');
-            
-    if ( a != null & b != null & a != "" & b != "" & a.length < 50)  {       
-            personaMoviDB.movies[a] = b;
-            console.log('donne');
-            }  else {
-                console.log(" error"); 
-                i--;
+
+
+    function getCoupeNumber(seatNumber) {
+        if (typeof(seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+                return "Ошибка. Проверьте правильность введенного номера места";
+            }
+        
+            if (seatNumber === 0 || seatNumber > 36) {
+                return "Таких мест в вагоне не существует";
+            }
+        
+            for (let i = 4; i <= 36; i = i + 4) {
+                if (seatNumber <= i) {
+                    return Math.ceil(i / 4);
+                }
             }
         }
+            getCoupeNumber(2);
 
-    if (personaMoviDB.count < 10) {
-        console.log("Вы просмотрели мало фильмов");
-    }  else if (personaMoviDB.count >= 10 & personaMoviDB.count < 30) {
-        console.log("Вы посмотрели много фильмов");
-    }  else if (personaMoviDB.count >= 30 ) {
-        console.log("Вы кономан");
-    }  else {
-        console.log("произошла ошибка");
-    }             
 
-     console.log(personaMoviDB);
+            function getTimeFromMinutes(time) {
+                  if() {
+                    
+                  }   
+            }
+            function getTimeFromMinutes()
+        
+        
+        
+        
+        
+
 
             
-   
